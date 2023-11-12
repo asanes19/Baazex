@@ -1,0 +1,320 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
+
+/*===============  MY CUSTOM CSS ===============*/
+
+:root {
+    --header-height: 3.5rem;
+
+    /*========== My Custom Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: #d1a644;
+    --first-color-alt: hsl(219, 69%, 52%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 0%);
+    --text-color-light: hsl(0, 0%, 0%);
+    --clr-neon: hsl(0, 100%, 29%);
+    --white-color: #000000;
+    /* --body-color: hsl(219, 4%, 4%); */
+
+    --body-color: #f9f9f9;
+    --container-color: hsl(219, 4%, 7%);
+
+    /*========== My Custom Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Exo", sans-serif;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    /*========== gradients ==========*/
+    --gradients: linear-gradient(45deg, #ffffff, #f9f9f9, #f0f0f0, rgb(209, 209, 209));
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+/*=============== BASE CSS ===============*/
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    font-size: var(--normal-font-size);
+    color: #fff;
+    background-color: #060818;
+}
+
+@keyframes bg-anim {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+h1,
+h2,
+h3 {
+    color: black;
+    font-weight: var(--font-semi-bold);
+    text-align: end;
+}
+p{
+    text-align: end;
+}
+
+ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1024px;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.main {
+    overflow: hidden;
+}
+
+/*=============== HEADER & NAV BAR ===============*/
+
+.site_logo {
+    width: 37%;
+    /* margin-top: 10px; */
+}
+
+/*=============== BUTTON ===============*/
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    padding: 0.5rem 2rem;
+    border-radius: 0.25rem;
+    font-size: var(--normal-font-size);
+    transition: 0.3s;
+}
+.button:hover {
+    background-color: var(--first-color-alt);
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: hsl(219, 4%, 16%);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(219, 4%, 24%);
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(219, 4%, 32%);
+}
+
+/* Show Scroll Up*/
+
+.show-scroll {
+    bottom: 3rem;
+}
+
+
+.section {
+    padding: 1.5rem 0 1rem;
+}
+
+.logIn {
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../img/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-section {
+    position: absolute;
+    top: 265px;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #4ba6ef;
+}
+
+.login-box h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: end;
+    color: #000;
+}
+
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: 2px solid #4ba6ef;
+}
+
+.carBtn button {
+    background-color: #fff;
+    color: #4ba6ef;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 130px;
+    border: 2px solid #4ba6ef;
+    transition: background-color 0.3s ease; /* Add transition here */
+}
+
+.carBtn button:hover {
+    background-color: #4ba6ef;
+    color: #fff;
+}
+
+
+/* Styling for the table container */
+.table-container {
+    padding: 20px; /* Add padding around the table */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the container */
+}
+
+/* Styling for the users list table */
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.users-table th,
+.users-table td {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.tableHeader{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    border-bottom: 1px solid #ffffff99;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.myBtn {
+    color: #9f0101f0;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    border: 2px solid #9f0101f0;
+    transition: background-color 0.3s ease; /* Add transition here */
+}
+
+.myBtn:hover {
+    background-color: #9f0101f0;
+    color: #fff;
+}
+
+/* Extra small devices (phones) */
+@media only screen and (max-width: 600px) {
+    /* Your CSS styles for small screens here */
+  }
+  
+  /* Small devices (tablets) */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Your CSS styles for medium-sized screens here */
+  }
+  
+  /* Medium devices (desktops and laptops) */
+  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* Your CSS styles for larger screens here */
+  }
+  
+  /* Large devices (large desktops and high-res screens) */
+  @media only screen and (min-width: 1441px) {
+    /* Your CSS styles for extra-large screens here */
+  }
+  
